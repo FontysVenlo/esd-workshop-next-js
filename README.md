@@ -7,5 +7,6 @@ That includes:
 - Code
 - Workshop materials
 - Presentation (if applicable)
+- https://stichtingfontys-my.sharepoint.com/:p:/r/personal/520081_student_fontys_nl/Documents/NextJSPresentation.pptx?d=wee049e981c3d4d2c933e01f1a0d6e35d&csf=1&web=1&e=KqfL4g
 - References
 - Docker (compose) file (if applicable)
