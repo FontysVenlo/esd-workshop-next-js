@@ -1,0 +1,28 @@
+name: Build and Commit PDF
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # wichtig, damit wir committen können
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Build PDF
+        run: pandoc nextjs.md -o docs/nextjs.pdf --citeproc
+
+      - name: Commit PDF to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/nextjs.pdf
+          git commit -m "Auto-update PDF"
+          git push
