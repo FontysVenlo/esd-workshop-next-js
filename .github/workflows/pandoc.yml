@@ -11,18 +11,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # wichtig, damit wir committen können
+          fetch-depth: 0
 
       - name: Install Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
+      - name: Download APA CSL
+        run: wget https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+
       - name: Build PDF
-        run: pandoc nextjs.md -o docs/nextjs.pdf --citeproc
+        run: |
+          mkdir -p docs
+          pandoc nextjs.md -o docs/nextjs.pdf --citeproc --csl=apa.csl
 
       - name: Commit PDF to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/nextjs.pdf
-          git commit -m "Auto-update PDF"
+          git commit -m "Auto-update PDF" || echo "No changes to commit"
           git push
