@@ -1,4 +1,4 @@
-name: Build and Commit PDF
+name: Build and Commit DOCX
 
 on:
   push:
@@ -19,15 +19,15 @@ jobs:
       - name: Download APA CSL
         run: wget https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
 
-      - name: Build PDF
+      - name: Build DOCX
         run: |
           mkdir -p docs
           pandoc nextjs.md -o docs/nextjs.docx --citeproc --csl=apa.csl
 
-      - name: Commit PDF to repo
+      - name: Commit DOCX to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/nextjs.pdf
-          git commit -m "Auto-update PDF" || echo "No changes to commit"
+          git add docs/nextjs.docx
+          git commit -m "Auto-update DOCX" || echo "No changes to commit"
           git push
