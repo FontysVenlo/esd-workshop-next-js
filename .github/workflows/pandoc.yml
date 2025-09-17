@@ -22,7 +22,7 @@ jobs:
       - name: Build PDF
         run: |
           mkdir -p docs
-          pandoc nextjs.md -o docs/nextjs.pdf --citeproc --csl=apa.csl
+          pandoc nextjs.md -o docs/nextjs.docx --citeproc --csl=apa.csl
 
       - name: Commit PDF to repo
         run: |
