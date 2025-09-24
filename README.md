@@ -8,5 +8,5 @@ That includes:
 - Workshop materials
 - Presentation (if applicable)
 - [Presentation](https://stichtingfontys-my.sharepoint.com/:p:/r/personal/520081_student_fontys_nl/Documents/NextJSPresentation.pptx?d=wee049e981c3d4d2c933e01f1a0d6e35d&csf=1&web=1&e=KqfL4g)
-- References
+- [References](/references.bib)
 - Docker (compose) file (if applicable)
