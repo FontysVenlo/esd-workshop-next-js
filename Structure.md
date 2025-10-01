@@ -23,3 +23,27 @@
 - [ ] Setup instructions (Node, Git, editor, Vercel)  
 - [ ] Backup assets (screenshots/gifs)  
 - [ ] Feedback form
+
+
+
+
+## Final agenda
+
+
+| Week | Planned learning goal |
+| -------- | -------- |
+| <div id=""> Icebreaker & Welcome </div> | 5 min + |  
+| <div id=""> Introduction </div> | 15 min |
+| <div id="">  </div> | => 5 Next.js background & general information what is next.JS |
+| <div id="">  </div> | => 5 Vercel background & general information |
+| <div id="">  </div> | => 5 Why does next exist? |
+| <div id=""> Components & Rendering </div> |10 min |
+| <div id=""> Interaction House building: Difference Server&Client Side </div> | 10 min |
+| <div id=""> Client-side rendering </div> | 10 min |
+| <div id=""> Server-side rendering </div> | 10 min |
+| <div id=""> API Routes </div> | 10 min |
+| <div id=""> Practical workshop: Focus on API Routes, server&client side rendering with pre build project </div> |30 min  |
+| <div id=""> Presentation workshop result </div> | 10 min |
+| <div id=""> Conclusion </div> | 5 min |
+| <div id="">  </div> | 105 min |
+
