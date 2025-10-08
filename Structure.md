@@ -47,3 +47,4 @@
 | <div id=""> Conclusion </div> | 5 min | Jan |
 | <div id="">  </div> | 105 min |
 
+**all individual tasks have to be finished until 22nd October 25'!!**
