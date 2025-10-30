@@ -39,7 +39,7 @@
 | <div id="">  </div> | => 5 Why does next exist? |Jan |
 | <div id=""> Components & Rendering </div> |10 min | Berkay |
 | <div id=""> Interaction House building: Difference Server&Client Side </div> | 10 min | Berkay & Jan |
-| <div id="">  Server-side rendering </div> | 10 min | Jan |
+| <div id="">  Server-side rendering (plus SSG und ISR) </div> | 10 min | Jan |
 | <div id=""> Client-side rendering </div> | 10 min | Berkay | 
 | <div id=""> API Routes </div> | 10 min | Berkay | 
 | <div id=""> Practical workshop: Focus on API Routes, server&client side rendering with pre build project </div> |30 min  | Berkay & Jan |
