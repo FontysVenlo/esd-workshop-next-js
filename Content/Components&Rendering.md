@@ -33,7 +33,18 @@ app/
 
 # Rendering Types (5–6 min)
 
-##  Server Components
+
+https://miro.medium.com/v2/resize:fit:1400/format:webp/1*qtbY8twpsF6WBghrpz4fXg.png<img width="1400" height="933" alt="image" src="https://github.com/user-attachments/assets/f3fa45f9-1f51-4c88-a0a2-4a815469cb29" />
+
+
+
+##  Server Side Rendering - Server Components (Pre-rendering)
+
+
+
+https://tutorialsight.com/content/images/size/w1600/2023/01/client-side-rendering.webp<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/fcc12876-8567-4304-8258-294ea21092b4" />
+
+
 
 - **Default** in Next.js 13+ App Router.
 - Rendered **on the server**, sent as static HTML to the browser.
@@ -57,7 +68,25 @@ export default async function ProductList() {
 }
 ```
 
-##  Client Components
+
+https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fpages-router%2Fdata-fetching%2Fserver-side-rendering.png&w=1920&q=75<img width="1386" height="800" alt="image" src="https://github.com/user-attachments/assets/40c8334d-3e48-4849-b35e-c741f6de4310" />
+
+
+## Static Side Generation (Pre-rendering)
+
+
+https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.vercel-storage.com%2Flearn%2Fpages-router%2Fdata-fetching%2Fstatic-generation.png&w=1920&q=75<img width="1386" height="744" alt="image" src="https://github.com/user-attachments/assets/bc58d5ee-a5d9-4d5b-a410-e56a74b0a2c8" />
+
+
+
+
+## Incremental Static Regeneration (pre-rendering)
+
+
+
+
+
+##  Client Side Rendering - Client Components
 
 - Rendered in the **Browser**.
 - Needed for **interactivity** (state, event handlers, etc.)
