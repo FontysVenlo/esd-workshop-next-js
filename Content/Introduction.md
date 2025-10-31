@@ -1,5 +1,5 @@
 ## Introduction
-## Next.js Background an general information
+## Next.js Background and general information
 
 - Released in 2016 by Vercel a
 - Vercel still maintains and leads development
