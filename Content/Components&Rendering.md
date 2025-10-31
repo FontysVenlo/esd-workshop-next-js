@@ -106,8 +106,8 @@ export default function Counter() {
 ```
 
 
+https://tutorialsight.com/content/images/size/w1600/2023/01/client-side-rendering.webp<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/e3ddca62-88c2-4d89-be4c-39615801bc5b" />
 
-https://tutorialsight.com/content/images/size/w1600/2023/01/client-side-rendering.webp![Uploading image.png…]()
 
 
 # Summary & Transition (1 min)
