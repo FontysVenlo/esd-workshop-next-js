@@ -42,7 +42,6 @@ https://miro.medium.com/v2/resize:fit:1400/format:webp/1*qtbY8twpsF6WBghrpz4fXg.
 
 
 
-https://tutorialsight.com/content/images/size/w1600/2023/01/client-side-rendering.webp<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/fcc12876-8567-4304-8258-294ea21092b4" />
 
 
 
@@ -105,6 +104,11 @@ export default function Counter() {
   );
 }
 ```
+
+
+
+https://tutorialsight.com/content/images/size/w1600/2023/01/client-side-rendering.webp![Uploading image.png…]()
+
 
 # Summary & Transition (1 min)
 
