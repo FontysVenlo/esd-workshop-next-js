@@ -82,6 +82,7 @@ https://nextjs.org/_next/image?url=https%3A%2F%2Fh8DxKfmAPhn8O0p3.public.blob.ve
 ## Incremental Static Regeneration (pre-rendering)
 
 
+https://robslog.com/wp-content/uploads/2023/11/incremental-static-regeneration-nextjs-1024x565.png<img width="1024" height="565" alt="image" src="https://github.com/user-attachments/assets/936cbfd8-0a82-4f9e-a60d-deabe9207f6b" />
 
 
 
