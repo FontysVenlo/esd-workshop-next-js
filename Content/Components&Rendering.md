@@ -38,6 +38,13 @@ https://miro.medium.com/v2/resize:fit:1400/format:webp/1*qtbY8twpsF6WBghrpz4fXg.
 
 
 
+
+## Rendern allgemein
+Was ist rendern?
+build Zeit
+
+
+
 ##  Server Side Rendering - Server Components (Pre-rendering)
 
 
@@ -97,9 +104,7 @@ As you can see, getServerSideProps is similar to getStaticProps, but the differe
 
 
 
-## Rendern allgemein
 
-build Zeit
 
 
 ## Static Side Generation (Pre-rendering)
@@ -116,7 +121,7 @@ In Next.js, you can statically generate pages with or without data. Let's take a
 Static Generation without data
 By default, Next.js pre-renders pages using Static Generation without fetching data. Here's an example:
 
-``
+```
 function About() {
   return <div>About</div>
 }
@@ -145,7 +150,7 @@ export default function Blog({ posts }) {
     </ul>
   )
 }
-``
+```
 
 To fetch this data on pre-render, Next.js allows you to export an async function called getStaticProps from the same file. This function gets called at build time and lets you pass fetched data to the page's props on pre-render.
 
@@ -248,7 +253,8 @@ Incremental Static Regeneration (ISR) enables you to:
 - Handle large amounts of content pages without long next build times
 
 
-```typescript
+```
+typescript
 import type { GetStaticPaths, GetStaticProps } from 'next'
  
 interface Post {
@@ -297,6 +303,7 @@ export default function Page({ post }: Props) {
     </main>
   )
 }
+```
 
 1. During next build, all known blog posts are generated
 2. All requests made to these pages (e.g. /blog/1) are cached and instantaneous
