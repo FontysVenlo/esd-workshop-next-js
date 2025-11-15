@@ -61,7 +61,7 @@ Landing page with introductory text and navigation.
 - **T2** - **Add a link/button to** ```/client```
 Use ```<Link href="/client">Go to Client Page</Link>``` so it's easy to start the interactive part.
 
-
+---
 ## ```app/server/page.tsx (Server-side Houses Page)```
 
 This is a **Server Component**.
@@ -84,7 +84,7 @@ Refresh ```/server``` and look at the **terminal**, not the browser console.
 - **T4 - Be ready to explain:**
   - Where does this code run? (On the server)
   - Why does it run on every request? (Because of ```cache: "no-store"```)
-
+---
 ## ```app/client/page.tsx (Client-side Houses Page)```
 
 This is a **Client Component** (```"use client"```).
@@ -110,7 +110,7 @@ This is a **Client Component** (```"use client"```).
 - ```typescript
   <p className="text-sm text-slate-400">Loading houses from the API…</p>
   ```
-
+---
 ## ```app/api/time/route.ts```
 
 Simple API endpoint that returns the current timestamp.
@@ -129,7 +129,7 @@ Simple API endpoint that returns the current timestamp.
   ```
 - **T8 - Use this endpoint somewhere (optional)**  
     Create a new page or update ```app/page.tsx``` to fetch and display the time.
-
+---
 ## ```app/api/houses/route.ts```
 
 A small REST-like API:
@@ -154,7 +154,7 @@ A small REST-like API:
   - Name cannot be empty.
   - Rooms must be > 0.
   - If invalid, return a 400 JSON response.
-
+---
 ## ```components/NavBar.tsx```
 
 Simple Tailwind-powered navigation component.
@@ -166,7 +166,7 @@ Simple Tailwind-powered navigation component.
   - Make one link look "active"
   - Add hover transitions
   - Use ```usePathname()``` (advanced) to highlight the current page
-
+---
 ## ```components/HouseList.tsx```
 
 Displays a list of houses.
@@ -185,9 +185,10 @@ Displays a list of houses.
   - Shadow
   - Padding
   - Font size
-
+    
 Make it look like your own version.
 
+---
 ## ```components/HouseForm.tsx```
 
 Client-side form component used on ```/client```.
@@ -251,7 +252,7 @@ Contains placeholders and TODOs.
   - Disable button while loading.
   - Add success message.
   - Add animations (e.g., Tailwind transitions).
-
+---
 ## 3. Data Flow Summary
 
 Here's the full picture:
@@ -273,7 +274,7 @@ Here's the full picture:
 - Uses ```useEffect()``` to fetch data
 - Updates React state dynamically
 - Creates houses with the ```<HouseForm />```
-
+---
 ## 4. Bonus Challenges (Optional)
 
 If you finish early, try one or more:
@@ -284,7 +285,7 @@ If you finish early, try one or more:
     Add a select dropdown that filters houses by type.
 - **B3 - Improve ```/api/time``` and show timestamp on ```/server```:**  
     Demonstrate SSR + API mixing.
-
+---
 ## 5. Resetting Data
 
 The houses are stored in memory inside the API route.
@@ -293,7 +294,7 @@ The data resets anytime you:
 
 - Restart ```npm run dev```
 - Save changes to the file (hot reload)
-
+---
 ## 6. Summary
 
 By completing this workshop you will learn:
