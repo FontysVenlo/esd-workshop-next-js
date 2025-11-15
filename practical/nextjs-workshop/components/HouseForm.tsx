@@ -1,25 +1,38 @@
 "use client";
 
-// TODO 4: Complete this form so that it calls the /api/houses endpoint
-// from the client and updates the list in the Client-side page.
-
 import { useState } from "react";
+import { House } from "./HouseList";
 
-export default function HouseForm({ onHouseCreated }) {
+export default function HouseForm({
+  onHouseCreated
+}: {
+  onHouseCreated: (house: House) => void;
+}) {
   const [name, setName] = useState("");
   const [rooms, setRooms] = useState(3);
   const [type, setType] = useState("Apartment");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
 
-    // TODO 4.1: Implement the POST call to /api/houses
-    // Hint: use fetch("/api/houses", { method: "POST", body: JSON.stringify({...}), headers: {"Content-Type": "application/json"} })
-
-    // TODO 4.2: On success, clear the form and call onHouseCreated(newHouse)
+    // TODO: Students implement this in the workshop
+    // Example (leave commented for the exercise):
+    //
+    // setLoading(true);
+    // const res = await fetch("/api/houses", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ name, rooms, type })
+    // });
+    // const data = await res.json();
+    // onHouseCreated(data.house);
+    // setName("");
+    // setRooms(3);
+    // setType("Apartment");
+    // setLoading(false);
   }
 
   return (
@@ -34,8 +47,7 @@ export default function HouseForm({ onHouseCreated }) {
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          placeholder="Cozy Cottage"
+          className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2"
         />
       </label>
 
@@ -44,10 +56,9 @@ export default function HouseForm({ onHouseCreated }) {
         <input
           type="number"
           min={1}
-          max={20}
           value={rooms}
           onChange={(e) => setRooms(Number(e.target.value))}
-          className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+          className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2"
         />
       </label>
 
@@ -56,7 +67,7 @@ export default function HouseForm({ onHouseCreated }) {
         <select
           value={type}
           onChange={(e) => setType(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+          className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2"
         >
           <option>Apartment</option>
           <option>Detached</option>
@@ -69,8 +80,7 @@ export default function HouseForm({ onHouseCreated }) {
 
       <button
         type="submit"
-        disabled={loading}
-        className="mt-1 inline-flex w-fit items-center justify-center rounded-full bg-sky-500 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-sky-400 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-1 w-fit rounded-full bg-sky-500 px-4 py-2 text-sm text-slate-900"
       >
         {loading ? "Saving..." : "Save House"}
       </button>

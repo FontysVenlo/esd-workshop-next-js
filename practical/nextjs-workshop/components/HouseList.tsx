@@ -1,6 +1,17 @@
-export default function HouseList({ houses }) {
+export interface House {
+    id: number;
+    name: string;
+    rooms: number;
+    type: string;
+  }
+  
+  export default function HouseList({ houses }: { houses: House[] }) {
     if (!houses || houses.length === 0) {
-      return <p className="text-sm text-slate-400">No houses yet. Try adding some.</p>;
+      return (
+        <p className="text-sm text-slate-400">
+          No houses yet. Try adding some.
+        </p>
+      );
     }
   
     return (
