@@ -14,6 +14,23 @@ export default function Button({ label }) {
 }
 ```
 
+User interfaces can be broken down into smaller building blocks called components.
+Components allow you to build self-contained, reusable snippets of code. If you think of components as LEGO bricks, you can take these individual bricks and combine them together to form larger structures. If you need to update a piece of the UI, you can update the specific component or brick.
+![learn-components](https://github.com/user-attachments/assets/98949b40-2073-41a3-96c6-66f815be3238)
+
+
+
+This modularity allows your code to be more maintainable as it grows because you can add, update, and delete components without touching the rest of our application.
+The nice thing about React components is that they are just JavaScript. Let's see how you can write a React component, from a JavaScript perspective:
+
+
+You can keep nesting React components this way to form component trees:
+![learn-component-tree](https://github.com/user-attachments/assets/998bdfa4-7904-48a4-868a-aa6c2f2d5438)
+
+For example, your top-level HomePage component could hold a Header, an Article, and a Footer Component. And each of those components could in turn have their own child components and so on. For example, the Header component could contain a Logo, Title and Navigation component.
+This modular format allows you to reuse components in different places inside your app.
+
+
 ---
 
 ## **Component Hierarchy & Composition (2 min)**
