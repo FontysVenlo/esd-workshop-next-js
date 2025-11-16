@@ -1,9 +1,5 @@
 import { NextResponse } from "next/server";
-
-let houses = [
-  { id: 1, name: "Starter Apartment", rooms: 2, type: "Apartment" },
-  { id: 2, name: "Family Home", rooms: 5, type: "Detached" },
-];
+import { houses } from "./data";
 
 export async function GET() {
   return NextResponse.json({ houses });
@@ -17,6 +13,7 @@ export async function POST(req: Request) {
     name: body.name ?? "Unnamed",
     rooms: Number(body.rooms ?? 1),
     type: body.type ?? "Unknown",
+    city: body.city ?? "Unknown",
   };
 
   houses.push(newHouse);

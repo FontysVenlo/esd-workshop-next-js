@@ -27,7 +27,7 @@ export default function ClientPage() {
       <HouseForm onHouseCreated={(h) => setHouses((prev) => [...prev, h])} />
 
       {loading ? (
-        <p>Loading...</p>
+        <p className="text-sm text-slate-400">Loading houses from the API…</p>
       ) : (
         <HouseList houses={houses} />
       )}

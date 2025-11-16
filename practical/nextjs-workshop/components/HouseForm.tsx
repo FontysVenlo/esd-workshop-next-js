@@ -11,6 +11,7 @@ export default function HouseForm({
   const [name, setName] = useState("");
   const [rooms, setRooms] = useState(3);
   const [type, setType] = useState("Apartment");
+  const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -18,21 +19,41 @@ export default function HouseForm({
     e.preventDefault();
     setError("");
 
-    // TODO: Students implement this in the workshop
-    // Example (leave commented for the exercise):
-    //
-    // setLoading(true);
-    // const res = await fetch("/api/houses", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ name, rooms, type })
-    // });
-    // const data = await res.json();
-    // onHouseCreated(data.house);
-    // setName("");
-    // setRooms(3);
-    // setType("Apartment");
-    // setLoading(false);
+    // TODO: Students implement T14 & T15
+
+    setLoading(true);
+
+    const res = await fetch("/api/houses", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, rooms, type, city })
+      });
+
+      if (!res.ok) {
+        setError("Failed to create house");
+        setLoading(false);
+      return;
+      }
+
+      const data = await res.json();
+
+      onHouseCreated(data.house);
+
+      setName("");
+      setRooms(3);
+      setType("Apartment");
+      setCity("");
+      setLoading(false);
+
+
+      if (!name.trim()) {
+        setError("Please enter a house name.");
+      return;
+      }
+      if (rooms < 1) {
+        setError("Rooms must be at least 1.");
+      return;
+      }
   }
 
   return (
@@ -74,6 +95,15 @@ export default function HouseForm({
           <option>Semi-detached</option>
           <option>Villa</option>
         </select>
+      </label>
+
+      <label className="text-sm">
+        City
+        <input
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          className="mt-1 w-full rounded-lg border border-slate-700 px-3 py-2"
+        />
       </label>
 
       {error && <p className="text-sm text-red-400">{error}</p>}

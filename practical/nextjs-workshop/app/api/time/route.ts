@@ -4,5 +4,7 @@ export async function GET() {
   return NextResponse.json({
     now: new Date().toISOString(),
     message: "Hello from /api/time",
-  });
+    workshop: "Next.js ESDE",
+    author: "Your Name"
+    });
 }

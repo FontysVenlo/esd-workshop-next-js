@@ -5,6 +5,7 @@ async function fetchHouses(): Promise<{ houses: House[] }> {
   const res = await fetch("http://localhost:3000/api/houses", {
     cache: "no-store"
   });
+  console.log("Fetching houses on the server");
   return res.json();
 }
 
