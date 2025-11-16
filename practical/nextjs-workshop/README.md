@@ -187,7 +187,7 @@ Displays a list of houses.
 - **T12 - Add a new field**  
     For example: ```city``` or ```price```
     Steps:
-  - Add it to the ```House``` TypeScript interface.
+  - Add it to the ```House``` TypeScript interface in ```/Components/HouseList.tsx``.
  
 ```typescript
 export interface House {
@@ -261,7 +261,41 @@ Contains placeholders and TODOs.
 
 ### Your Tasks
 
-- **T14 - Implement ```handleSubmit```:**
+
+-**T14 - Add input labels for city and price to ```/components/HouseForm.tsx```
+
+```typescript
+         <label className="text-sm">
+        City
+        <input
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          className="mt-1 w-full rounded-lg border border-slate-700 px-3 py-2"
+        />
+      </label>
+
+      <label className="text-sm">
+        Price
+        <input
+          type="number"
+          min={1}
+          value={price}
+          onChange={(e) => setPrice(Number(e.target.value))}
+          className="mt-1 w-full rounded-lg border border-slate-700 px-3 py-2"
+        />
+      </label>
+```
+
+- Add const for city and price to ```/components/HouseForm.tsx```
+
+```typescript
+const[city, setCity] = useState("");
+const[price, setPrice] = useState(5);
+```
+
+
+
+- **T15 - Implement ```handleSubmit```:**
 
   Steps:
   1. Set loading:
@@ -273,7 +307,7 @@ Contains placeholders and TODOs.
   const res = await fetch("/api/houses", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, rooms, type })
+  body: JSON.stringify({ name, rooms, type, city, price })
   });
   ```
    3. Handle errors:
@@ -299,7 +333,7 @@ Contains placeholders and TODOs.
    setType("Apartment");
    setLoading(false);
   ```
-- **T15 - Add validation**  
+- **T16 - Add validation**  
     Example:
   ```typescript
    if (!name.trim()) {
@@ -312,7 +346,7 @@ Contains placeholders and TODOs.
    }
   ```
 
-- **T16 - UX improvements (optional)**
+- **T17 - UX improvements (optional)**
   - Disable button while loading.
   - Add success message.
   - Add animations (e.g., Tailwind transitions).
