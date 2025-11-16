@@ -331,6 +331,8 @@ const[price, setPrice] = useState(5);
    setName("");
    setRooms(3);
    setType("Apartment");
+   setCity("");
+   setPrice(1);
    setLoading(false);
   ```
 - **T16 - Add validation**  
