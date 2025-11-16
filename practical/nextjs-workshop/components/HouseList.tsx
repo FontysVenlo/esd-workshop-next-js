@@ -19,11 +19,11 @@ export interface House {
         {houses.map((house) => (
           <li
             key={house.id}
-            className="rounded-2xl border border-slate-800 bg-slate-950/60 p-4 shadow-sm"
+            className="rounded-2xl border border-slate-800 bg-sky-100 p-4 shadow-sm"
           >
             <h3 className="mb-1 text-lg font-semibold">{house.name}</h3>
-            <p className="text-sm text-slate-200">Rooms: {house.rooms}</p>
-            <p className="text-xs text-slate-400">Type: {house.type}</p>
+            <p className="text-sm">Rooms: {house.rooms}</p>
+            <p className="text-xs">Type: {house.type}</p>
           </li>
         ))}
       </ul>
