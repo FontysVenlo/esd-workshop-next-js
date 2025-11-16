@@ -19,20 +19,7 @@ export default function HouseForm({
     setError("");
 
     // TODO: Students implement this in the workshop
-    // Example (leave commented for the exercise):
-    //
-    // setLoading(true);
-    // const res = await fetch("/api/houses", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ name, rooms, type })
-    // });
-    // const data = await res.json();
-    // onHouseCreated(data.house);
-    // setName("");
-    // setRooms(3);
-    // setType("Apartment");
-    // setLoading(false);
+    
   }
 
   return (
