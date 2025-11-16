@@ -188,8 +188,61 @@ Displays a list of houses.
     For example: ```city``` or ```price```
     Steps:
   - Add it to the ```House``` TypeScript interface.
-  - Add it into the initial array in ```/api/houses```.
-  - Display it inside the list UI.
+ 
+```typescript
+export interface House {
+    id: number;
+    name: string;
+    rooms: number;
+    type: string;
+    city: string;
+    price: number;
+  }
+```
+
+  - Add it into the initial array in ```/api/houses/route.ts```.
+```typescript
+ let houses = [
+ { id: 1, name: "Starter Apartment", rooms: 2, type: "Apartment" , city: "Venlo", price: 5},
+ { id: 2, name: "Family Home", rooms: 5, type: "Detached" , city: "Berlin", price: 5},
+ { id: 3, name: "Dream Loft", rooms: 4, type: "Apartment", city: "Amsterdam", price: 5 }
+ ];
+```
+
+
+  - Add it into the newHouse const in ```/api/houses/route.ts```.
+
+```typescript
+  const newHouse = {
+    id: Date.now(),
+    name: body.name ?? "Unnamed",
+    rooms: Number(body.rooms ?? 1),
+    type: body.type ?? "Unknown",
+    city: body.city ?? "Unknown",
+    price: body.price ?? 0
+  };
+```
+
+  - Display it inside the list UI in ```/Components/HouseList.tsx```.
+```typescript
+return (
+      <ul className="grid gap-4">
+        {houses.map((house) => (
+          <li
+            key={house.id}
+            className="rounded-2xl border border-slate-800 bg-sky-100 p-4 shadow-sm"
+          >
+            <h3 className="mb-1 text-lg font-semibold">{house.name}</h3>
+            <p className="text-sm">Rooms: {house.rooms}</p>
+            <p className="text-xs">Type: {house.type}</p>
+            <p className="text-xs">City: {house.city}</p>
+            <p className="text-xs">Price: {house.price}</p>
+          </li>
+        ))}
+      </ul>
+    );
+```
+    
 - **T13 - Style the cards**  
     Use Tailwind utilities to change:
   - Border
