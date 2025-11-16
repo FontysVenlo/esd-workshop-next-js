@@ -154,7 +154,18 @@ A small REST-like API:
   - Name cannot be empty.
   - Rooms must be > 0.
   - If invalid, return a 400 JSON response.
+ 
+  Add the following code to the Post:
+ 
+    ```typescript
+     if (!body.name || body.name.trim() === "") {
+    return NextResponse.json(
+      { error: "Name is required" },
+      { status: 400 }
+    );  }
+    ```
 ---
+
 ## ```components/NavBar.tsx```
 
 Simple Tailwind-powered navigation component.
