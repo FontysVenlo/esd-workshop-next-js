@@ -26,7 +26,7 @@ The repository contains a few **TODOs**, which you will complete during the work
 
 ```bash
 git clone https://github.com/FontysVenlo/esd-workshop-next-js nextjs-workshop
-cd nextjs-workshop
+cd nextjs-workshop/practical/nextjs-workshop
 npm install
 npm run dev
 ```
